@@ -1,0 +1,4 @@
+C = input(“digite o valor da coxinha”)
+Q = input(“digite quantas coxinhas”)
+R = C*Q
+Print ‘ O valor a pagar é ’, R
