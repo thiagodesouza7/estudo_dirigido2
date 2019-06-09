@@ -1,0 +1,22 @@
+
+import math
+nprimos = input("Quantos números devem ser lidos? ")
+lista_numeros = []
+lista_primos = []
+for i in range(nprimos):
+       lista_numeros.append(int(input()))
+lista_numeros = filter(lambda n: n > 1, lista_numeros)
+lista_numeros = list(set(lista_numeros))
+for numero in lista_numeros:
+           divisores = range(2, int(math.floor(math.sqrt(numero))) + 1)
+           restos = map(lambda div: numero % div, divisores)
+
+
+           if all(restos): 
+                       lista_primos.append(numero)
+if lista_primos:
+           print "Números primos:"
+           print lista_primos
+
+else:
+          print "Nenhum número primo lido.
